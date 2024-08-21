@@ -18,3 +18,10 @@ CPU/GPU
 - 1 x HDMI/Mini HDMI cable (it depends on the mini PC)
 - 1 x USB to SDD/M.2 adapter
 - 1 x SSD/M.2 disk
+
+WIRING
+- thin wires (for keybaord/trackpad)
+- thick wires (12v/5v/lighting)
+- some 5v leds
+
+![finished setup](/misc/all%20working.jpeg)
