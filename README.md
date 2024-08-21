@@ -1,3 +1,20 @@
 # vaio-pi4
 Repurposing Sony Vaio PCG-GRT360ZQ to use a PI4
 
+Components:
+
+CHASIS/LCD/POWER
+- 1 x Old laptop, with big case. We are going to remove ALL components, so the more free space the better
+- 1 x LCD/Display controller. You need to check in the laptop LCD for right controller. Mine was this (https://www.aliexpress.com/item/1005006254641119.html?spm=a2g0o.order_list.order_list_main.13.418d1802jBBXqt)
+- 2 x Step Down Buck Converter (in my case from 19v to 5v/5A and 12v/5A)
+
+KEYBOARD
+- 1 x Raspberry PICO
+- 1 x Arduino Nano/MiniPro
+- 1 x 5v/3.3v level converter
+
+CPU/GPU
+- 1 x Raspberry Pi / Orange Pi / some mini PC
+- 1 x HDMI/Mini HDMI cable (it depends on the mini PC)
+- 1 x USB to SDD/M.2 adapter
+- 1 x SSD/M.2 disk
