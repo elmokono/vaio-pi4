@@ -10,7 +10,9 @@ CHASIS/LCD/POWER
 
 KEYBOARD
 - 1 x Raspberry PICO
-- 1 x Arduino Nano/MiniPro
+
+TRACKPAD
+- 1 x Arduino Nano/MiniPro/some atmega
 - 1 x 5v/3.3v level converter
 
 CPU/GPU
@@ -23,5 +25,14 @@ WIRING
 - thin wires (for keybaord/trackpad)
 - thick wires (12v/5v/lighting)
 - some 5v leds
+
+Notes:
+- Pins combination not used in your keyboard can be used for any general purpose button. I used 2 pins for the trackpad buttons
+
+
+Credits:
+- Arduino PS2 Mouse - https://github.com/rucek/arduino-ps2-mouse
+- Pico Laptop Keyboard - https://github.com/s12wu/laptop-keyboard-reader
+
 
 ![finished setup](/misc/all%20working.jpeg)
