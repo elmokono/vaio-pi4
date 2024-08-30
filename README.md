@@ -42,4 +42,8 @@ TODO:
 
 ![diagram](/misc/diagram.png)
 
+![pico](/misc/pico%20external%20pullup%20resistors.jpeg)
+
+![pico2](/misc/keyboard%20to%20pico.jpeg)
+
 ![finished setup](/misc/all%20working.jpeg)
