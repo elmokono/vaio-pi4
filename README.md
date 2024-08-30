@@ -34,5 +34,6 @@ Credits:
 - Arduino PS2 Mouse - https://github.com/rucek/arduino-ps2-mouse
 - Pico Laptop Keyboard - https://github.com/s12wu/laptop-keyboard-reader
 
+![diagram](/misc/diagram.png)
 
 ![finished setup](/misc/all%20working.jpeg)
