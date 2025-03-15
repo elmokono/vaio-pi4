@@ -124,9 +124,13 @@ keymap = [
 # list that saves the current state of each key, 1 = released, 0 = pressed
 keystatus = [1] * len(keymap)
 
+print("Waiting 10 seconds for OS to start")
+time.sleep(10)
+
 # try connecting to USB HID, if it fails, reset and try again after 15 seconds.
 # (this is needed in my environment because USB devices aren't accepted for the first few seconds)
 try:
+    uart = busio.UART(board.GP0, board.GP1, baudrate=115200)
     kbd = Keyboard(usb_hid.devices)
     mouse = Mouse(usb_hid.devices)
     cc = ConsumerControl(usb_hid.devices)
@@ -135,10 +139,6 @@ except:
     time.sleep(15)
     microcontroller.reset()
 
-print("HID ok")
-
-uart = busio.UART(board.GP0, board.GP1, baudrate=115200)
-print("UART ok")
 
 # which pins is the keyboard ribbon connector connected to?
 KBD_pinnumbers = [
@@ -182,10 +182,11 @@ del KBD_pinnumbers
 for p in range(24):
     go_z(p)
 
-print("GPIO KB ok")
-
 mousePolling=0
 mousePollingCountAlive=0 #after 500 polls we turn on led
+
+print("Init ok")
+
 
 while True:
 
@@ -261,14 +262,13 @@ while True:
             if data: # b'1000\tx=0\ty=0\r\n'
                 decoded_data = data.decode('utf-8')
                 parts = decoded_data.split('\t')
-                x_part = parts[1]  # Esto será 'x=0'
-                y_part = parts[2]  # Esto será 'y=0'
+                x_part = parts[1]  # Esto serÃ¡ 'x=0'
+                y_part = parts[2]  # Esto serÃ¡ 'y=0'
                 x_value = int(x_part.split('=')[1])
                 y_value = int(y_part.split('=')[1]) * -1
                 #print(f"x = {x_value}, y = {y_value}")
                 mouse.move(x=x_value, y=y_value)
 
-
     #print(mouse_data);
 
-# Write your code here :-)
+# eof
